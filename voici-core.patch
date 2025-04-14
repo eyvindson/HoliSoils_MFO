@@ -1,0 +1,18 @@
+diff -Nru a/voici_core/addon.py b/voici_core/addon.py
+--- a/voici_core/addon.py	2020-02-02 02:00:00.000000000 +0200
++++ b/voici_core/addon.py	2024-03-12 14:11:14.821418170 +0200
+@@ -178,6 +178,14 @@
+ 
+         generated_file = generate_file(page_config)
+ 
++        # patch for nix: ensure files copied from nix store have write permissions
++        for root, dirs, files in os.walk(self.manager.output_dir):
++            os.chmod(root, 0o755)
++            for d in dirs:
++                os.chmod(os.path.join(root, d), 0o755)
++            for f in files:
++                os.chmod(os.path.join(root, f), 0o644)
++
+         if dest.is_dir():
+             shutil.rmtree(dest)
+         elif dest.exists():

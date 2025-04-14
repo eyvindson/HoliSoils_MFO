@@ -1,0 +1,24 @@
+[0;1;32m●[0m nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Thu 2025-04-03 07:17:39 UTC; 10min ago
+     Docs: man:nginx(8)
+  Process: 2188 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+  Process: 2197 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+  Process: 2189 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+ Main PID: 2199 (nginx)
+    Tasks: 11 (limit: 4915)
+   CGroup: /system.slice/nginx.service
+           ├─2199 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+           ├─2201 nginx: worker process
+           ├─2203 nginx: worker process
+           ├─2205 nginx: worker process
+           ├─2206 nginx: worker process
+           ├─2208 nginx: worker process
+           ├─2209 nginx: worker process
+           ├─2211 nginx: worker process
+           ├─2212 nginx: worker process
+           ├─2213 nginx: worker process
+           └─2214 nginx: worker process
+
+Apr 03 07:17:39 mf-optimization systemd[1]: Starting A high performance web server and a reverse proxy server...
+Apr 03 07:17:39 mf-optimization systemd[1]: Started A high performance web server and a reverse proxy server.

@@ -1,0 +1,164 @@
+{%- extends 'lab/index.html.j2' -%}
+
+{# this overrides the default behavior of directly starting the kernel and executing the notebook #}
+{% block notebook_execute %}
+{% endblock notebook_execute %}
+
+{%- block html_head_css -%}
+{{ super() }}
+{% if resources.theme == 'dark' %}
+{% set bar_color = '#555454' %}
+{% else %}
+{% set bar_color = '#5cbcaf' %}
+{% endif %}
+{{ resources.include_css("static/materialize.min.css") }}
+
+<style type="text/css">
+  body {
+    background-color: var(--jp-layout-color0);
+    overflow-y: scroll;
+  }
+
+  /* Overwrite default value, workaround for not breaking materialize */
+  .jp-Notebook {
+    padding: 0px !important;
+  }
+
+  .nav-wrapper {
+    background-color: {{ bar_color }};
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-wrapper h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  .voila-spinner-color1 {
+    fill: {{ bar_color }};
+  }
+
+  /* widget styling overrides */
+  
+  body {
+    --jp-content-heading-margin-top: 6rem;
+  }
+
+  .widget-hslider {
+    flex-flow: row wrap;
+    height: auto !important;
+  }
+  @media(max-width: 1300px) {
+    /* slider labels on their own row
+      and wrapping if they overflow */
+    .widget-hslider .widget-label {
+      flex-basis: 100%;
+      overflow-wrap: normal;
+      white-space: normal;
+      text-align: left !important;
+      height: auto !important;
+    }
+  }
+  .widget-hslider .slider-container {
+    min-width: 50px;
+    max-width: 400px;
+  }
+
+  /* Error message for losing connection */
+  .lm-Widget.jupyter-widgets-disconnected:before {
+    content: 'Error: disconnected';
+    /* don't display the error message on every widget.. */
+    display: none;
+  }
+  .lm-Widget.lm-Panel.jupyter-widgets-disconnected:before {
+    /* ..only on panels */
+    display: inline-block;
+  }
+
+  /* spinner for the optimize button when running */
+  .widget-button:disabled:after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 3px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    border-top-color: #111;
+    margin-left: 10px;
+    animation: 1s infinite linear spinner;
+  }
+  @keyframes spinner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .widget-button {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+  }
+</style>
+
+<style>
+a.anchor-link {
+  display: none;
+}
+.highlight  {
+  margin: 0.4em;
+}
+/* we keep the DOM for nbconvert the same as for voila, but hide the status icon */
+#kernel-status-icon {
+  display: none;
+}
+</style>
+
+{%- endblock html_head_css -%}
+
+{%- block body -%}
+{%- block body_header -%}
+  {{ super() }}
+  <header>
+    <div class="navbar-fixed">
+      <nav class="top-nav">
+        <div class="nav-wrapper">
+          <h1>Preference evalution</h1>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+{%- endblock body_header -%}
+
+{%- block body_loop -%}
+          {% if resources.theme == 'dark' %}
+          <div class="jp-Notebook theme-dark">
+          {% else %}
+          <div class="jp-Notebook theme-light">
+          {% endif %}
+            {{ super() }}
+          </div>
+{%- endblock body_loop -%}
+
+{%- block body_footer -%}
+        </div>
+      </div>
+    </div>
+  </main>
+  {{ super() }}
+  {{ resources.include_js("static/materialize.min.js") }}
+{%- endblock body_footer -%}
+
+{%- endblock body -%}
