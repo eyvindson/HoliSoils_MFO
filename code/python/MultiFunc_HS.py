@@ -13,6 +13,8 @@ from IPython.display import clear_output
 from ipywidgets import Button, HBox, VBox,interact
 from datetime import datetime
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import matplotlib.colors as mcolors
 
 from ortools.linear_solver import pywraplp
 
@@ -23,6 +25,8 @@ from IPython.display import display, HTML
 
 from tqdm import tqdm
 import sys
+import xarray as xr
+
 
 import math
 
@@ -802,10 +806,7 @@ f                                                (self.data.loc[(slice(None),yea
         display_local("Problem solved at "+str(datetime.now()))
         self.solutionTimeStamp = str(now).replace(":"," ")
         if res == self.solver.OPTIMAL:
-            if self.LOC == "ANSSI":
-                display(HTML("<h3>OUTCOMES</h3>"))
-                display({self.objectiveTypes[objName][0]:self.objective[objName].solution_value() for objName in self.objectiveTypes.keys()})
-            elif self.LOC == "HS":
+            if self.LOC == "HS":
                 display(HTML("<h3>OUTCOMES</h3>"))
                 display({self.objectiveTypes[objName][0]:self.objective[objName].solution_value() for objName in self.objectiveTypes.keys()})
             else:
@@ -937,54 +938,6 @@ f                                                (self.data.loc[(slice(None),yea
             reformat[k]=[t4[k]]
         t3 = pd.DataFrame(reformat)
         t3 =t3.transpose()
-        if self.LOC == "GER":
-            t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),list(self.unit.keys())])
-            t7 = t6.reset_index()
-            t7.set_index(['id','regime','year'], inplace=True)
-            tt3 = t7[['HarvestedVolume']]
-            tt3 = tt3.rename(columns={"HarvestedVolume":"Decision"})
-            self.tt3=tt3
-            for (s,r) in t3.index:
-                tt3.loc[(s,r,slice(None)),"Decision"] = t3.loc[(s,r)][0].solution_value()
-            tt7 = t7.reset_index().set_index(['id','regime','year'])
-            result=tt7.mul(tt3['Decision'],axis=0)#.max()['V']    
-            result = result.groupby(["id","year"]).sum()
-            self.result = result
-        if self.LOC == "FINN":
-            t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),['V', 'i_Vm3', 'Harvested_V', 'Harvested_V_log_under_bark',
-                   'Harvested_V_pulp_under_bark', 'Harvested_V_under_bark', 'MAIN_SP',
-                   'Age', 'AGE_ba', 'SC', 'Biomass', 'ALL_MARKETED_MUSHROOMS', 'BILBERRY',
-                   'COWBERRY', 'HSI_MOOSE', 'CAPERCAILLIE', 'HAZEL_GROUSE',
-                   'V_total_deadwood', 'N_where_D_gt_40', 'PEAT','CARBON_SINK', 'prc_V_deciduous',
-                   'clearcut', 'CARBON_STORAGE_Update', 'Recreation','Disc_cash_flow_3','Disc_cash_flow_1',
-                   'Scenic',]])#
-            t7 = t6.reset_index()
-            t7.set_index(['id','regime','year'], inplace=True)
-            tt3 = t7[['V']]
-            tt3 = tt3.rename(columns={"V":"Decision"})
-            self.tt3=tt3
-            for (s,r) in t3.index:
-                tt3.loc[(s,r,slice(None)),"Decision"] = t3.loc[(s,r)][0].solution_value()
-            tt7 = t7.reset_index().set_index(['id','regime','year'])
-            result=tt7.mul(tt3['Decision'],axis=0)
-            result = result.groupby(["id","year"]).sum()
-            self.result = result
-            self.AREA_REGIMES = (self.data.loc[slice(None),slice(None),slice(None)]['AREA']*tt3['Decision']).to_frame().loc[slice(None),self.data.index.get_level_values(1)[0],slice(None)].groupby("regime").sum()
-            
-        if self.LOC == "ANSSI":
-            t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),['BIOMASS', 'DEADWOOD', 'NPV3',]])#
-            t7 = t6.reset_index()
-            t7.set_index(['id','regime','year'], inplace=True)
-            tt3 = t7[['BIOMASS']]
-            tt3 = tt3.rename(columns={"V":"Decision"})
-            self.tt3=tt3
-            for (s,r) in t3.index:
-                tt3.loc[(s,r,slice(None)),"Decision"] = t3.loc[(s,r)][0].solution_value()
-            tt7 = t7.reset_index().set_index(['id','regime','year'])
-            result=tt7.mul(tt3['Decision'],axis=0)
-            result = result.groupby(["id","year"]).sum()
-            self.result = result
-            self.AREA_REGIMES = (self.data.loc[slice(None),slice(None),slice(None)]['AREA']*tt3['Decision']).to_frame().loc[slice(None),self.data.index.get_level_values(1)[0],slice(None)].groupby("regime").sum()
         if self.LOC == "HS":
             t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),list(self.VARS.keys())])#
             t7 = t6.reset_index()
@@ -999,32 +952,6 @@ f                                                (self.data.loc[(slice(None),yea
             result = result.groupby(["id","year"]).sum()
             self.result = result
             self.AREA_REGIMES = (self.data.loc[slice(None),slice(None),slice(None)]['AREA']*tt3['Decision']).to_frame().loc[slice(None),self.data.index.get_level_values(1)[0],slice(None)].groupby("regime").sum()
-        if self.LOC == "NOR":
-            t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),list(self.unit.keys())])
-            t7 = t6.reset_index()
-            t7.set_index(['plot_id','regime','year'], inplace=True)
-            tt3 = t7[['harv_net_Mnok_TotNor']]
-            tt3 = tt3.rename(columns={"harv_net_Mnok_TotNor":"Decision"})
-            self.tt3=tt3
-            for (s,r) in t3.index:
-                tt3.loc[(s,r,slice(None)),"Decision"] = t3.loc[(s,r)][0].solution_value()
-            tt7 = t7.reset_index().set_index(['plot_id','regime','year'])
-            result=tt7.mul(tt3['Decision'],axis=0)
-            result = result.groupby(["plot_id","year"]).sum()
-            self.result = result
-        if self.LOC =="SWE":
-            t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),['Age','StandingVolume', 'VolumeDecidous', 'SumVolumeCutTotal','SumTimberVolumeTotal', 'SumPulpVolumeTotal', 'SumHarvestResiduesTotal','SumHarvestFuelwoodTotal', 'AnnualIncrementNetTotal', 'DeadWoodVolume','reserve', 'NPV', 'RecreationIndex', 'TotalCarbon', 'PulpFuel','SimulatedSAWlog', 'SimulatedResidue', 'SimulatedPulPFuel','DeciduousRatio', 'old_deciduous_rich_forest_area', 'SetAside','managed', '110%_of_periodic_increment_managed','90%_of_periodic_increment_managed', 'Total_VolumeDeciduous','Total_DeadWoodVolume', 'Total_RecreationIndex', 'Total_TotalCarbon','Relative_RepresentedArea', 'Relative_Age', 'Relative_StandingVolume','Relative_VolumeDecidous', 'Relative_SumVolumeCutTotal','Relative_SumTimberVolumeTotal', 'Relative_SumPulpVolumeTotal','Relative_SumHarvestResiduesTotal', 'Relative_SumHarvestFuelwoodTotal','Relative_DeadWoodVolume', 'Relative_RecreationIndex','Relative_TotalCarbon', 'Relative_PulpFuel', 'Relative_SimulatedSAWlog','Relative_SimulatedResidue', 'Relative_SimulatedPulPFuel','Relative_DeciduousRatio', 'Relative_old_deciduous_rich_forest_area','Relative_Total_VolumeDeciduous', 'Relative_Total_DeadWoodVolume','Relative_Total_RecreationIndex', 'Relative_Total_TotalCarbon',]])
-            t7 = t6.reset_index()
-            t7.set_index(['Description','period','combinedRegime'], inplace=True)
-            tt3 = t7[['StandingVolume']]
-            tt3 = tt3.rename(columns={"StandingVolume":"Decision"})
-            self.tt3=tt3
-            for (s,r) in t3.index:
-                tt3.loc[(s,slice(None),r),"Decision"] = t3.loc[(s,r)][0].solution_value()
-            tt7 = t7.reset_index().set_index(['Description','period','combinedRegime'])
-            result=tt7.mul(tt3['Decision'],axis=0)#.max()['V']    
-            result = result.groupby(['Description','period']).sum()
-            self.result = result
             
         return result
     
@@ -1058,53 +985,14 @@ f                                                (self.data.loc[(slice(None),yea
 
     def create_line(self,**kwargs):
         fig, ax = plt.subplots(figsize=(8, 4), dpi=100)
-        if self.LOC =="FINN":
-            area = self.data.loc[slice(None),2024,"SA"]['AREA'].sum()
-            title_Y = self.unit_head[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}")
-            (self.result.groupby(['year']).sum()/area).plot(use_index=True,y=kwargs['feature1'],legend=False,title=title_Y,ylabel=title_Y+" "+self.unit[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}"),xlabel="Vuosi",ax=ax)
-        if self.LOC =="ANSSI":
-            area = self.data.loc[slice(None),2050,"initial_regime"]['AREA'].sum()
-            title_Y = self.unit_head[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}")
-            (self.result.groupby(['year']).sum()/area).plot(use_index=True,y=kwargs['feature1'],legend=False,title=title_Y,ylabel=title_Y+" "+self.unit[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}"),xlabel="Vuosi",ax=ax)
         if self.LOC =="HS":
             area = self.data.loc[slice(None),2050,"initial_regime"]['AREA'].sum()
             title_Y = self.unit_head[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}")
             (self.result.groupby(['year']).sum()/area).plot(use_index=True,y=kwargs['feature1'],legend=False,title=title_Y,ylabel=title_Y+" "+self.unit[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}"),xlabel="Vuosi",ax=ax)
-        if self.LOC =="GER":
-            area = self.data.loc[slice(None),2017,"NOT"]['represented_area_by_NFIplot'].sum()
-            title_Y = self.unit_head[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}")
-            (self.result.groupby(['year']).sum()/area).plot(use_index=True,y=kwargs['feature1'],legend=False,title=title_Y,ylabel=title_Y+" "+self.unit[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}"),xlabel="Vuosi",ax=ax)
-        if self.LOC == "NOR":
-            area = self.data.loc[slice(None),2028,"SimOpt_no_management_0"]['tsd_ha2total'].sum()
-            title_Y = self.unit_head[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}")
-            (self.result.groupby(['year']).sum()/area).plot(use_index=True,y=kwargs['feature1'],legend=False,title=title_Y,ylabel=title_Y+" "+self.unit[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}"),xlabel="Vuosi",ax=ax)
-        if self.LOC == "SWE":
-            #area = self.data.loc[slice(None),2028,"SimOpt_no_management_0"]['tsd_ha2total'].sum()
-            (self.result.groupby(['period']).sum()).plot(use_index=True,y=kwargs['feature1'],legend=False,title=kwargs['feature1'],ylabel=kwargs['feature1'],xlabel="Year",ax=ax)
-            #title_Y = self.unit_head[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}")
-            #(self.result.groupby(['year']).sum()).plot(use_index=True,y=kwargs['feature1'],legend=False,title=title_Y,ylabel=title_Y+" "+self.unit[kwargs['feature1']].replace("<sup>","$^").replace("</sup>","$").replace("<sub>","$_").replace("</sub>","$").replace("-1","{-1}"),xlabel="Year",ax=ax)
         plt.show()
         
     def show_regime(self):
-        if self.LOC =="FINN":
-            REGS = (self.data.loc[slice(None),slice(None),slice(None)]['AREA']*self.tt3['Decision']).to_frame().loc[slice(None),2024,slice(None)].groupby("regime").sum()
-            dic_BAU = {'I-Jakso': ["BAU_m5","BAUwT_m5","BAUwoT_m20","BAU_F","BAUwT_F","BAU_m5_F","BAUwT_m5_F","BAUwo5_m20_F"],
-                       'Jakso':["BAU","BAUwT","BAUwoT"],
-                       'Jakso-ilmasto':["BAUwT_B","BAUwT_5_B","BAUwT_15_B","BAUwT_30_B",'BAU_GTR_B'],#"BAUwT_GTR_B",
-                       'E-Jakso':["BAUwT_GTR","BAUwGTR","BAU_5","BAUwT_5","BAU_15","BAUwT_15","BAU_30","BAUwT_30"],
-                       'Jatkuva':["CCF_1","CCF_2","CCF_3","CCF_4"],
-                       'Suojelu':["SA"]}
-            dd = {i:(REGS.loc[dic_BAU[i]].sum()[0]/sum(REGS[0]))*100 for i in dic_BAU.keys()}
-        elif self.LOC =="ANSSI":
-            REGS = (self.data.loc[slice(None),slice(None),slice(None)]['AREA']*self.tt3['Decision']).to_frame().loc[slice(None),2050,slice(None)].groupby("regime").sum()
-            dic_BAU = {'I-Jakso': [i for i in range(1,80)],#["BAU_m5","BAUwT_m5","BAUwoT_m20","BAU_F","BAUwT_F","BAU_m5_F","BAUwT_m5_F","BAUwo5_m20_F"],
-                       'Jakso':["BAU","BAUwT","BAUwoT"],
-                       'Jakso-ilmasto':["BAUwT_B","BAUwT_5_B","BAUwT_15_B","BAUwT_30_B",'BAU_GTR_B'],#"BAUwT_GTR_B",
-                       'E-Jakso':["BAUwT_GTR","BAUwGTR","BAU_5","BAUwT_5","BAU_15","BAUwT_15","BAU_30","BAUwT_30"],
-                       'Jatkuva':["CCF_1","CCF_2","CCF_3","CCF_4"],
-                       'Suojelu':["SA"]}
-            dd = {i:(REGS.loc[dic_BAU[i]].sum()[0]/sum(REGS[0]))*100 for i in dic_BAU.keys()}
-        elif self.LOC =="HS":
+        if self.LOC =="HS":
             REGS = (self.data.loc[slice(None),slice(None),slice(None)]['AREA']*self.tt3['Decision']).to_frame().loc[slice(None),2050,slice(None)].groupby("regime").sum()
             dic_BAU = {'I-Jakso': ['BAU', 'BAUnDIACUT', 'BAUpDIACUT', 'BAUpTHININT','BAUnTHININT', 'BAUppRESIDUAL', 'BAUpRESIDUAL', 'BAUpN'],#[i for i in range(1,80)],#["BAU_m5","BAUwT_m5","BAUwoT_m20","BAU_F","BAUwT_F","BAU_m5_F","BAUwT_m5_F","BAUwo5_m20_F"],
                        'Jakso':["BAU","BAUwT","BAUwoT"],
@@ -1113,49 +1001,7 @@ f                                                (self.data.loc[(slice(None),yea
                        'Jatkuva':["CCF_1","CCF_2","CCF_3","CCF_4"],
                        'Suojelu':["SA"]}
             dd = {i:(REGS.loc[dic_BAU[i]].sum()[0]/sum(REGS[0]))*100 for i in dic_BAU.keys()}
-        elif self.LOC =="GER":
-            REGS = (self.data.loc[slice(None),slice(None),slice(None)]['Relative_represented_area_by_NFIplot']*self.tt3['Decision']).to_frame().loc[slice(None),2017,slice(None)].groupby("regime").sum()
-            dic_BAU = {
-                       'IBAU': ["BAU_FS1","BAU_RR","BAU_RR_p2","BAU_RR_p1"],
-                       'BAU':["BAU_0","BAU_0_p2","BAU_0_p1"],
-                       'EBAU':["BAU_1"],
-                       'CCF':["CCF_P2","CCF_P3","CCF_P3_p1","CCF_P3_p2","CCF_P1"],
-                       'ACC':["CCF_STATE"],
-                       'SA':["NOT"]}
-            dd = {i:(REGS.loc[dic_BAU[i]].sum()[0]/sum(REGS[0]))*100 for i in dic_BAU.keys()}
-        elif self.LOC == "NOR":
-            REGS = (self.data.loc[slice(None),slice(None),slice(None)]['tsd_ha2total']*self.tt3['Decision']).to_frame().loc[slice(None),2028,slice(None)].groupby("regime").sum()
-            dic_BAU = {'AAC': ["SimOpt_multispecies_0","SimOpt_multispecies_5","SimOpt_multispecies_1","SimOpt_multispecies_4","SimOpt_multispecies_15","SimOpt_multispecies_13","SimOpt_multispecies_3","SimOpt_multispecies_2","SimOpt_multispecies_18","SimOpt_multispecies_10","SimOpt_multispecies_11","SimOpt_multispecies_12","SimOpt_multispecies_14","SimOpt_multispecies_16","SimOpt_multispecies_7","SimOpt_multispecies_17","SimOpt_multispecies_9","SimOpt_multispecies_8","SimOpt_multispecies_6"],
-               "BAU": ["SimOpt_extensive_0","SimOpt_extensive_18","SimOpt_extensive_13","SimOpt_extensive_9","SimOpt_extensive_17","SimOpt_extensive_2","SimOpt_extensive_6","SimOpt_extensive_1","SimOpt_extensive_8","SimOpt_extensive_14","SimOpt_extensive_15","SimOpt_extensive_10","SimOpt_extensive_16","SimOpt_extensive_4","SimOpt_extensive_11","SimOpt_extensive_5","SimOpt_extensive_3","SimOpt_extensive_7","SimOpt_extensive_12"],
-               "CCF": ["SimOpt_ccover_0","SimOpt_ccover_1","SimOpt_ccover_2"],
-               "E-BAU": ["SimOpt_extensive_long_0","SimOpt_extensive_long_10","SimOpt_extensive_long_18","SimOpt_extensive_long_1","SimOpt_extensive_long_11","SimOpt_extensive_long_9","SimOpt_extensive_long_13","SimOpt_extensive_long_6","SimOpt_extensive_long_15","SimOpt_extensive_long_12","SimOpt_extensive_long_5","SimOpt_extensive_long_4","SimOpt_extensive_long_8","SimOpt_extensive_long_16","SimOpt_extensive_long_14","SimOpt_extensive_long_3","SimOpt_extensive_long_17","SimOpt_extensive_long_7","SimOpt_extensive_long_2"],
-               "I-BAU": ["SimOpt_int_0","SimOpt_int_short_0","SimOpt_int_short_1","SimOpt_int_short_4","SimOpt_int_3","SimOpt_int_12","SimOpt_int_2","SimOpt_int_8","SimOpt_int_short_2","SimOpt_int_4","SimOpt_int_short_10","SimOpt_int_18","SimOpt_int_7","SimOpt_int_1","SimOpt_int_short_17","SimOpt_int_short_8","SimOpt_int_13","SimOpt_int_9","SimOpt_int_10","SimOpt_int_14","SimOpt_int_short_13","SimOpt_int_short_9","SimOpt_int_short_5","SimOpt_int_short_12","SimOpt_int_short_7","SimOpt_int_short_11","SimOpt_int_11","SimOpt_int_short_16","SimOpt_int_short_6","SimOpt_int_short_14","SimOpt_int_6","SimOpt_int_short_3","SimOpt_int_5","SimOpt_int_15","SimOpt_int_short_15","SimOpt_int_short_18","SimOpt_int_16","SimOpt_int_17"],
-               "SA": ["SimOpt_no_management_0"]}
-            dd = {i:(REGS.loc[dic_BAU[i]].sum()[0]/sum(REGS[0]))*100 for i in dic_BAU.keys()}
-        elif self.LOC == "SWE":
-            data_slice = self.data.loc[slice(None), slice(None), slice(None)]
-            REGS = (data_slice['RepresentedArea'] * self.tt3['Decision']).to_frame().loc[slice(None), 1, slice(None)]
-            REGS1 = REGS.reset_index()
-            REGS1[['combinedRegime']] = REGS1['combinedRegime'].apply(lambda x: pd.Series(str(x).split("_")))[[0]]
-            REGS1['combinedRegime'] = REGS1['combinedRegime'].str[19:]
-            REGS1 = REGS1.set_index(['Description', 'combinedRegime']).groupby("combinedRegime").sum()
-            # Define management regimes dictionary and compute dd
-            dic_BAU = {'AAC': ["Lovgynnande trakthyggesbruk"],
-                       "BAU": ["BAU"],
-                       "CCF": ["CCF"],
-                       "E-BAU": ["BAU - NoThinning", "BAU_ProlongedRotation"],
-                       "I-BAU": ["Int_HybridExotic", "Int_Contorta", "BAU FocusBioenergy", "BAU_FocusBioenergy_StumpHarvest", "Int_Prod"],
-                       "SA": ["SetAside (Unmanaged)"]}
-            dd = {}
-            for i in dic_BAU.keys():
-                k = 0
-                for ii in dic_BAU[i]:
-                    try:
-                        dd[i] = dd.get(i, 0) + (REGS1.loc[ii][0] / sum(REGS[0])) * 100
-                        k = 1
-                    except:
-                        pass
-
+        
         fig = plt.figure(figsize=[12, 10], dpi=100)
         ax1, ax2 = plt.subplot2grid(shape=(4,4),loc=(1,2),rowspan=3,colspan=2,fig=fig), plt.subplot2grid(shape=(4,4),loc=(0,0),rowspan=1,colspan=4,fig=fig)
         pd.DataFrame({self.objectiveTypes[objName][0]: (self.objective[objName].solution_value() - self.objectiveRanges[objName][0]) / (self.objectiveRanges[objName][1] - self.objectiveRanges[objName][0]) * 100 for objName in reversed(self.objectiveTypes.keys())}, index=["VAL"]).T.plot.barh(ax=ax1, legend=False)
@@ -1350,14 +1196,8 @@ f                                                (self.data.loc[(slice(None),yea
             #results = self.defineReferencePointAndSolve(**{key: self.imRef.children[i].value for i, key in enumerate(self.objectiveTypes.keys())})
             with results_placeholder:
                 results_placeholder.clear_output()  # Clear previous results
-                if self.LOC == "ANSSI":
-                    print("DONE")
                 if self.LOC == "HS":
                     def create_map():
-                        import matplotlib.pyplot as plt
-                        import matplotlib.cm as cm
-                        import matplotlib.colors as mcolors
-
                         # Step 1: Solution values
                         decision_values = [var.solution_value() for var in self.decisionFrame["Decision"]]
 
@@ -1373,38 +1213,6 @@ f                                                (self.data.loc[(slice(None),yea
                         
                         unique_types = sorted(data_2d['level_1'].unique())
                         
-                        '''
-                        # Step 4: Map unique management types to consistent colors using tab10
-                        unique_types = sorted(data_2d['level_1'].unique())
-                        cmap = cm.get_cmap('tab10')
-                        color_map = {level: cmap(i % 10) for i, level in enumerate(unique_types)}  # Safe for up to 10 types
-
-                        # Step 5: Assign color values for the scatter plot
-                        data_2d['color'] = data_2d['level_1'].map(color_map)
-
-                        # ===== Scatter Plot =====
-                        plt.figure(figsize=(10, 6))
-                        plt.scatter(
-                            data_2d['lon'], data_2d['lat'],
-                            c=data_2d['color'], s=100, edgecolor='black'
-                        )
-
-                        # Custom legend
-                        handles = [
-                            plt.Line2D([0], [0], marker='o', color='w', label=label,
-                                       markerfacecolor=color_map[label], markersize=7)
-                            for label in unique_types
-                        ]
-                        plt.legend(handles=handles, title='Management', bbox_to_anchor=(1.05, 1), loc='upper left')
-                        plt.xlabel("Longitude")
-                        plt.ylabel("Latitude")
-                        plt.title("Forest management")
-                        plt.grid(True)
-                        plt.tight_layout()
-                        plt.show()'''
-                        import pandas as pd
-                        import numpy as np
-                        import xarray as xr
 
                         df = data_2d
                         df['treatment_code'] = df['level_1'].astype('category').cat.codes + 1
