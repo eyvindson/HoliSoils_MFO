@@ -1,0 +1,507 @@
+[W 2025-04-14 09:40:21.138 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-04-14 09:40:21.138 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-04-14 09:40:21.138 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2025-04-14 09:40:21.399 LabApp] JupyterLab extension loaded from /nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyterlab
+[I 2025-04-14 09:40:21.399 LabApp] JupyterLab application directory is /nix/store/9iy13bamlflgf498pj5kv5bi98s82b09-python3.11-jupyterlab-3.5.0/share/jupyter/lab
+[I 09:40:21.518 NotebookApp] Serving notebooks from local directory: /home/ubuntu/workspace/HoliSoils
+[I 09:40:21.518 NotebookApp] Jupyter Notebook 6.5.6 is running at:
+[I 09:40:21.518 NotebookApp] http://localhost:8893/?token=54de397ad76c2110d0af4eeb50fc895a1a4d43b278753f32
+[I 09:40:21.518 NotebookApp]  or http://127.0.0.1:8893/?token=54de397ad76c2110d0af4eeb50fc895a1a4d43b278753f32
+[I 09:40:21.518 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:40:21.553 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ubuntu/.local/share/jupyter/runtime/nbserver-2154-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8893/?token=54de397ad76c2110d0af4eeb50fc895a1a4d43b278753f32
+     or http://127.0.0.1:8893/?token=54de397ad76c2110d0af4eeb50fc895a1a4d43b278753f32
+[W 09:41:13.089 NotebookApp] Notebook code/Holisoils.ipynb is not trusted
+[W 09:41:13.235 NotebookApp] 404 GET /nbextensions/voila/extension.js?v=20250414094016 (127.0.0.1) 144.320000ms referer=http://127.0.0.1:8893/notebooks/code/Holisoils.ipynb
+[W 09:41:13.586 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20250414094016 (127.0.0.1) 19.640000ms referer=http://127.0.0.1:8893/notebooks/code/Holisoils.ipynb
+[I 09:41:13.743 NotebookApp] Kernel started: 2fdcc1bd-1c7c-4055-90ed-c737af70ac10, name: python3
+0.03s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 09:43:04.424 NotebookApp] Starting buffering for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+E0414 09:41:35.345757  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345811  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345817  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345821  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345840  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345844  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345847  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345851  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345854  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345858  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345861  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345865  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345868  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345872  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345875  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345878  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345882  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345885  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345888  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345892  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345895  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345898  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345901  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345905  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345908  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345911  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345914  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345918  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345921  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345925  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345928  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345931  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345934  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345938  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345941  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345944  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345947  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345950  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345954  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345957  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345960  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345963  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345966  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345970  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345973  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345976  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345979  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345982  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345986  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345989  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345992  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345995  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.345998  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346002  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346005  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346008  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346012  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346015  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346018  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346021  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346024  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346028  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346031  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346034  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346037  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346040  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346044  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346047  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346050  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346053  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346056  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346059  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346062  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346065  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346069  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346072  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346075  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346078  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346082  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346085  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346088  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346092  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346095  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346098  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346101  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346104  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346107  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346110  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346113  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346116  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346120  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346123  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346126  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346130  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346133  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346136  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346139  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346142  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346145  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346148  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346151  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346155  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346158  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346161  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346164  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346168  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346171  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346175  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346178  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346181  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346184  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346188  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346191  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346194  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346197  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346200  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346203  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346206  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346209  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346212  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346216  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346219  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346222  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346225  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346228  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346231  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346234  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346237  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346241  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346244  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346247  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346250  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346253  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346257  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346260  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346263  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346266  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346269  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346272  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346275  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346279  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346282  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346285  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346288  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346291  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346294  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346297  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346300  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346304  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346307  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346310  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346313  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346316  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346319  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346323  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346326  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346329  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346332  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346336  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346339  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346342  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346345  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346348  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346351  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346354  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346357  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346360  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346363  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346366  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346370  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346373  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346376  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346379  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346382  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346394  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346397  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346401  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346404  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346407  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346410  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346413  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346416  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346419  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346423  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346426  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346429  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346432  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346435  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346438  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346441  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346445  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346448  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346451  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346454  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346458  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346461  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346464  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346467  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346470  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346473  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346476  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346479  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346483  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346486  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346489  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346492  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346495  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346498  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346501  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346504  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346508  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346511  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346514  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346517  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346520  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346523  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346526  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346529  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346532  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346536  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346539  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346542  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346545  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346548  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346551  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346554  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346557  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346560  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346564  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346567  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346570  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346573  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346586  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346590  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346593  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346596  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346599  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346602  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346605  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346608  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346611  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346614  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346617  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346620  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346623  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346627  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346630  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346633  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346636  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346639  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346642  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346645  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346648  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346651  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346654  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346657  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346660  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346664  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346667  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346670  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346673  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346676  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346679  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346682  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346686  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346689  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346692  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346695  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346698  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346701  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346704  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346707  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346710  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346713  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346716  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346719  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346722  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346725  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346728  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346731  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346734  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346737  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346740  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346743  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346746  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346749  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346752  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346756  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346759  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346762  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346765  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346768  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346771  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346774  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346777  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346780  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346783  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346787  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346790  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346793  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346796  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346799  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346802  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346805  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346808  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346811  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346814  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346817  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346820  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346824  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346827  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346830  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346833  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346836  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346839  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346842  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346845  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346848  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346851  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346854  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346857  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346860  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346863  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346866  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346870  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346873  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346876  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346879  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346882  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346885  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346888  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346891  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346894  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346897  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346900  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346904  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346907  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346910  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346913  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346916  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346919  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346922  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346925  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346928  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346931  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346934  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346937  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346940  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346943  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346946  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346949  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346952  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346955  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346958  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346961  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346965  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346968  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346971  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346974  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346977  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346980  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346983  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346986  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346989  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346992  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346995  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.346998  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347001  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347005  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347008  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347011  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347014  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347017  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347020  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347023  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347026  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347029  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347032  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347035  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347039  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347042  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347045  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347058  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347061  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347064  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347067  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347070  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347072  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347075  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347078  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347081  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347084  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347087  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347090  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347093  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347096  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347099  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347102  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347104  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347107  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347110  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347113  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347116  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347119  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347122  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347125  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347128  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347131  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347134  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347137  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347139  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347142  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347145  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347148  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347151  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+E0414 09:41:35.347154  2326 linear_solver.cc:1886] The model has been changed since the solution was last computed. MPSolverInterface::sync_status_ = 0
+[I 09:43:06.952 NotebookApp] Kernel restarted: 2fdcc1bd-1c7c-4055-90ed-c737af70ac10
+[I 09:43:07.019 NotebookApp] Restoring connection for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 09:43:07.404 NotebookApp] Replaying 171 buffered messages
+[I 09:43:22.594 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 09:45:14.009 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 09:47:13.664 NotebookApp] Saving file at /code/Holisoils.ipynb
+/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/nbformat/__init__.py:132: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate(nb)
+/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/notebook/services/contents/manager.py:353: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate_nb(model['content'])
+[I 09:49:13.798 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 09:51:13.715 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 09:53:13.559 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 09:55:14.073 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 09:57:13.743 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 09:59:13.799 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 10:01:13.546 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 10:03:13.794 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 10:03:47.940 NotebookApp] Starting buffering for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+[I 10:03:48.569 NotebookApp] Kernel restarted: 2fdcc1bd-1c7c-4055-90ed-c737af70ac10
+[I 10:03:48.640 NotebookApp] Restoring connection for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 10:03:49.007 NotebookApp] Replaying 3 buffered messages
+[I 10:04:48.299 NotebookApp] Starting buffering for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+[I 10:04:48.729 NotebookApp] Kernel restarted: 2fdcc1bd-1c7c-4055-90ed-c737af70ac10
+[I 10:04:48.794 NotebookApp] Restoring connection for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 10:04:49.207 NotebookApp] Replaying 3 buffered messages
+[I 10:05:14.117 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 10:08:17.000 NotebookApp] Starting buffering for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+[I 10:08:17.532 NotebookApp] Kernel restarted: 2fdcc1bd-1c7c-4055-90ed-c737af70ac10
+[I 10:08:17.599 NotebookApp] Restoring connection for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 10:08:18.106 NotebookApp] Replaying 3 buffered messages
+[I 10:09:13.753 NotebookApp] Saving file at /code/Holisoils.ipynb
+[I 10:09:27.675 NotebookApp] Starting buffering for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+[I 10:09:28.104 NotebookApp] Kernel restarted: 2fdcc1bd-1c7c-4055-90ed-c737af70ac10
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 10:09:37.378 NotebookApp] Restoring connection for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+[I 10:09:37.383 NotebookApp] Replaying 6 buffered messages
+[I 10:09:39.344 NotebookApp] Kernel restarted: 2fdcc1bd-1c7c-4055-90ed-c737af70ac10
+[I 10:09:39.375 NotebookApp] Starting buffering for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+[I 10:09:39.406 NotebookApp] Restoring connection for 2fdcc1bd-1c7c-4055-90ed-c737af70ac10:7d4b09a8986949cbae62c12791c9a5bd
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 10:11:13.891 NotebookApp] Saving file at /code/Holisoils.ipynb

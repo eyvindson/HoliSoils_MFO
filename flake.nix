@@ -111,6 +111,7 @@
             # build dependencies
             pkgs.jfrog-cli
             pkgs.jq
+            pkgs.python311Packages.xarray
           ];
 
           # expose the locally modified theme for jupyter to find

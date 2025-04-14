@@ -1,4 +1,4 @@
-# MultiOptForest
+# MultiOptForest -- Holisoils
 
 This is a modified [Voila](https://github.com/voila-dashboards/voila) build
 of the MultiOptForest optimization tool

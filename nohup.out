@@ -1,0 +1,275 @@
+[Voila] WARNING | Unrecognized alias: 'ip', it will have no effect.
+[Voila] Using /tmp/nix-shell.HFuBdb to store connection files
+[Voila] Storing connection files in /tmp/nix-shell.HFuBdb/voila_anszqdsn.
+[Voila] Serving static files from /nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/static.
+[Voila] Voilà is running at:
+http://localhost:8888/
+[Voila] WARNING | Clearing invalid/expired login cookie username-128-214-253-167
+[Voila] Kernel started: 0b6c404c-c9db-48d3-b97c-74211abb0368
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[Voila] Connecting to kernel 0b6c404c-c9db-48d3-b97c-74211abb0368.
+[Voila] Handle signal 15.
+[Voila] Kernel shutdown: 0b6c404c-c9db-48d3-b97c-74211abb0368
+[Voila] WARNING | Unrecognized alias: 'ip', it will have no effect.
+[Voila] Using /tmp/nix-shell.LZjqKS to store connection files
+[Voila] Storing connection files in /tmp/nix-shell.LZjqKS/voila__wv_xd2c.
+[Voila] Serving static files from /nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/static.
+[Voila] Voilà is running at:
+http://localhost:8888/
+[Voila] WARNING | Clearing invalid/expired login cookie username-128-214-253-167
+[Voila] Kernel started: 4a03f7e2-30d8-47d2-9440-e85d4d89cddb
+0.19s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[Voila] Connecting to kernel 4a03f7e2-30d8-47d2-9440-e85d4d89cddb.
+404 GET /.env (127.0.0.1) 0.48ms
+404 GET /.env (127.0.0.1) 0.48ms
+404 GET /conf/config.ini (127.0.0.1) 0.40ms
+404 GET /config/cache.php (127.0.0.1) 0.33ms
+404 GET /develop/info.php (127.0.0.1) 0.27ms
+404 GET /admin/info.php (127.0.0.1) 0.27ms
+404 GET /api/phpinfo.php (127.0.0.1) 0.26ms
+404 GET /config.yml (127.0.0.1) 0.27ms
+404 GET /configure.php.bak (127.0.0.1) 0.26ms
+404 GET /config.ini.bak (127.0.0.1) 0.29ms
+404 GET /dashboard/phpinfo.php (127.0.0.1) 0.26ms
+404 GET /favicon.ico (127.0.0.1) 0.51ms
+[Voila] Starting buffering for 4a03f7e2-30d8-47d2-9440-e85d4d89cddb:7835c62b-8d53-40c3-94c2-24faf7325da5
+[Voila] WARNING | Notebook Holisoils.ipynb is not trusted
+[Voila] Kernel shutdown: 4a03f7e2-30d8-47d2-9440-e85d4d89cddb
+[Voila] Kernel started: 7c9c7d14-ff66-4785-bc53-f5421fee1600
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[Voila] Connecting to kernel 7c9c7d14-ff66-4785-bc53-f5421fee1600.
+[Voila] Handle signal 15.
+[Voila] Kernel shutdown: 7c9c7d14-ff66-4785-bc53-f5421fee1600
+[Voila] WARNING | Unrecognized alias: 'ip', it will have no effect.
+[Voila] Using /tmp/nix-shell.qkKJ5e to store connection files
+[Voila] Storing connection files in /tmp/nix-shell.qkKJ5e/voila_gpfn_yit.
+[Voila] Serving static files from /nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/static.
+[Voila] Voilà is running at:
+http://localhost:8888/
+[Voila] WARNING | Clearing invalid/expired login cookie username-128-214-253-167
+[Voila] WARNING | Notebook Holisoils.ipynb is not trusted
+[Voila] WARNING | Clearing invalid/expired login cookie username-128-214-253-167
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1): Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc
+[Voila] WARNING | wrote error: 'Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc'
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/shutdown_kernel_handler.py", line 11, in post
+    await ensure_async(self.kernel_manager.shutdown_kernel(kernel_id))
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 417, in _async_shutdown_kernel
+    self._check_kernel_id(kernel_id)
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 531, in _check_kernel_id
+    raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc)
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1) 7.74ms
+[Voila] Kernel started: b87f4511-de1d-4b24-afbd-3ff84ad4efa7
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1): Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc
+[Voila] WARNING | wrote error: 'Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc'
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/shutdown_kernel_handler.py", line 11, in post
+    await ensure_async(self.kernel_manager.shutdown_kernel(kernel_id))
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 417, in _async_shutdown_kernel
+    self._check_kernel_id(kernel_id)
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 531, in _check_kernel_id
+    raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc)
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1) 1.40ms
+[Voila] WARNING | Notebook Holisoils.ipynb is not trusted
+[Voila] Kernel started: 2e23480b-c9af-4f91-9957-8bf53c5a67df
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1): Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc
+[Voila] WARNING | wrote error: 'Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc'
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/shutdown_kernel_handler.py", line 11, in post
+    await ensure_async(self.kernel_manager.shutdown_kernel(kernel_id))
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 417, in _async_shutdown_kernel
+    self._check_kernel_id(kernel_id)
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 531, in _check_kernel_id
+    raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc)
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1) 1.81ms
+[Voila] WARNING | Notebook Holisoils.ipynb is not trusted
+[Voila] Kernel started: f90f29cb-d442-4d68-949d-810c6b3aa5df
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+404 POST /voila/api/shutdown/0f7988fa-618d-4192-a1f3-7e8c39b010e6 (127.0.0.1): Kernel does not exist: 0f7988fa-618d-4192-a1f3-7e8c39b010e6
+[Voila] WARNING | wrote error: 'Kernel does not exist: 0f7988fa-618d-4192-a1f3-7e8c39b010e6'
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/shutdown_kernel_handler.py", line 11, in post
+    await ensure_async(self.kernel_manager.shutdown_kernel(kernel_id))
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 417, in _async_shutdown_kernel
+    self._check_kernel_id(kernel_id)
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 531, in _check_kernel_id
+    raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 0f7988fa-618d-4192-a1f3-7e8c39b010e6)
+404 POST /voila/api/shutdown/0f7988fa-618d-4192-a1f3-7e8c39b010e6 (127.0.0.1) 1.36ms
+Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1788, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 269, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/base/handlers.py", line 738, in write_error
+    html = self.render_template("%s.html" % status_code, **ns)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/handler.py", line 55, in render_template
+    template = self.get_template(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/treehandler.py", line 40, in get_template
+    return self.settings["voila_jinja2_env"].get_template(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 405.html
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1298, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/base/handlers.py", line 740, in write_error
+    html = self.render_template("error.html", **ns)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/handler.py", line 56, in render_template
+    return template.render(**ns)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/workspace/HoliSoils/share/jupyter/voila/templates/material/error.html", line 9, in top-level template code
+    {{ caller() }}
+  File "/home/ubuntu/workspace/HoliSoils/share/jupyter/voila/templates/material/base.html", line 106, in top-level template code
+    {% block body %}
+  File "/home/ubuntu/workspace/HoliSoils/share/jupyter/voila/templates/material/error.html", line 17, in block 'body'
+    {{ error_body(status_code, status_message) }}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/workspace/HoliSoils/share/jupyter/voila/templates/material/error.html", line 9, in template
+    {{ caller() }}
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: No caller defined
+405 OPTIONS / (127.0.0.1) 32.05ms
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1): Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc
+[Voila] WARNING | wrote error: 'Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc'
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/shutdown_kernel_handler.py", line 11, in post
+    await ensure_async(self.kernel_manager.shutdown_kernel(kernel_id))
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 417, in _async_shutdown_kernel
+    self._check_kernel_id(kernel_id)
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 531, in _check_kernel_id
+    raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc)
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1) 1.70ms
+[Voila] WARNING | Notebook Holisoils.ipynb is not trusted
+[Voila] Kernel started: 03548803-c36b-4c64-b254-1f2ee622d376
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1): Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc
+[Voila] WARNING | wrote error: 'Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc'
+Traceback (most recent call last):
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/shutdown_kernel_handler.py", line 11, in post
+    await ensure_async(self.kernel_manager.shutdown_kernel(kernel_id))
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 417, in _async_shutdown_kernel
+    self._check_kernel_id(kernel_id)
+  File "/nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 531, in _check_kernel_id
+    raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc)
+404 POST /voila/api/shutdown/40e7cc3c-39f7-4e6f-8a53-2b485ecdf6dc (127.0.0.1) 1.21ms
+[Voila] WARNING | Notebook Holisoils.ipynb is not trusted
+[Voila] Kernel started: 89e58cf0-882e-436c-9d0d-53ac43f3cae3
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[Voila] WARNING | Clearing invalid/expired login cookie username-128-214-253-167
+404 GET /favicon.ico (127.0.0.1) 0.60ms
+404 GET /api/kernels?1744625469648 (127.0.0.1) 0.24ms
+404 GET /api/kernels?1744625496339 (127.0.0.1) 0.44ms
+[Voila] WARNING | Unrecognized alias: 'ip', it will have no effect.
+[Voila] Using /tmp/nix-shell.qkKJ5e to store connection files
+[Voila] Storing connection files in /tmp/nix-shell.qkKJ5e/voila_keh_526l.
+[Voila] Serving static files from /nix/store/i0k6k89a4k93wxkz5ivk9nnicfzhys4i-python3-3.11.8-env/lib/python3.11/site-packages/voila/static.
+[Voila] The port 8888 is already in use, trying another port.
+[Voila] Voilà is running at:
+http://localhost:8889/
+404 GET /api/kernels?1744625516008 (127.0.0.1) 1.46ms
+[Voila] Kernel started: fe11808a-114e-4eea-914d-134377641700
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[Voila] Connecting to kernel fe11808a-114e-4eea-914d-134377641700.

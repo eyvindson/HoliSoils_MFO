@@ -22,13 +22,14 @@ def print_local(s):
     
 class OptGUI:
     
-    def __init__(self,scenario,defined,data):
+    def __init__(self,scenario,defined,data,VARS):
         
         
         self.scenario = scenario
         self.data = data
         self.defined = defined
         self.filename = data
+        self.VARS = VARS
         
         path_to_zip_file = module_path + "data/compressed/" + self.data
         directory_to_extract_to = module_path+"data"
@@ -51,13 +52,14 @@ class OptGUI:
             'NPP':(float,"Relative to Area")
         }
         self.mfo.LOC = "HS"
-        self.mfo.unit={"TOTAL_SOIL_c":"kg C ha<sup>-1</sup>",
-                   "NBP_pool_c":"kg C ha <sup>-1</sup>",
-                   "NPP":"??"}
+        self.mfo.unit={k: v[0] for k, v in self.VARS.items()}
+        #{"TOTAL_SOIL_c":"kg C ha<sup>-1</sup>",
+        #           "NBP_pool_c":"kg C ha <sup>-1</sup>",
+        #           "NPP":"??"}
         
-        self.mfo.unit_head={"TOTAL_SOIL_c":"Total soil C",
-                   "NBP_pool_c":"NBP pool",
-                       "NPP":"Net primary production"}
+        self.mfo.unit_head={k: v[1] for k, v in self.VARS.items()}#{"TOTAL_SOIL_c":"Total soil C",
+                   #"NBP_pool_c":"NBP pool",
+                       #"NPP":"Net primary production"}
         
         self.mfo.calculateTotalValuesFromRelativeValues(columnTypes=self.columnTypes)
 
@@ -69,78 +71,43 @@ class OptGUI:
         self.mfo.finalizeData(initialRegime="initial_state")
 
         
-        if self.scenario == 'BDS':
-            
-            self.wood_production_bioenergy = { 
-            
-            "TOTAL_SOIL_c" : ["Total soil C",
-                            "TOTAL_SOIL_c",
-                            "max","lastYear","areaWeightedAverage","TEXT FOR HOVERING NPV"],
-            
-            # Harvested roundwood - maximise (even flow)
-            #"Average_Harvested_V" : ["Hakkuukertymä (Tukki + Kuitu) (m3/ha/v)",
-            #                         "Harvested_V",
-            #                         "max","min","areaWeightedAverage","TEXT FOR HOVERING AVG Harv V"]
-            #
 
-            #"Discounted_NPV_3" : ["Diskointi revenue (€)",
-            #                         "DISC_3",
-            #                         "max","lastYear","areaWeightedAverage","TEXT FOR HOVERING NPV"],
-            # 
-            
+        
+        self.indicators = { 
+        
+        "TOTAL_SOIL_c" : ["Total soil C",
+                        "TOTAL_SOIL_c",
+                        "max","lastYear","areaWeightedAverage","TEXT FOR HOVERING NPV"],
+        
+        "NBP_pool_c" : ["NBP pool",
+                    "NBP_pool_c",
+                    "max","lastYear","areaWeightedAverage", "TEXT FOR HOVERING Carbon"],
+
+        # Deadwood - target 2050, increase by XX%
+        "NPP" : ["Net primary production",
+                                           "NPP",
+                                           "max","lastYear","areaWeightedAverage","TEXT FOR HOVERING AVG DW _2050"],
+        # Average age - target 2100, increase by XX%
+        "HARVEST_FOREST_c": ["Total amount of forest carbon harvested",
+                                          "HARVEST_FOREST_c",
+                                          "max","lastYear","areaWeightedAverage","TEXT FOR HOVERING HARVEST"],
+        # Deciduous tree volume - target 2050, increase by XX% 
+        "TOTAL_BM_LITTER_c": ["Total amount of litter biomass (C)",
+                                          "TOTAL_BM_LITTER_c",
+                                          "max","lastYear","areaWeightedAverage","TEXT FOR HOVERING total BM LITTER"],
+
             }
+        
+        self.filtered_dict = {k: v for k, v in self.indicators.items() if k in self.VARS}
+        
+        
+        self.objectives = {
+                  **self.filtered_dict
+                  #**self.biodiversity
+                  #**self.recreation
+                  }
             
-            #self.game = {
-            # HSI moose - maximise       
-            #"Sum_Total_HSI_MOOSE": ["Total habitat index for MOOSE (max average over all years)",
-            #                       "Total_HSI_MOOSE",
-            #                       "max","average","sum","TEXT FOR HOVERING HSI MOOSE"],
-            # HSI hazel grouse - maximise
-            #"Sum_Total_HAZEL_GROUSE": ["Total habitat index for HAZEL_GROUSE (max average over yrs)",
-            #                       "Total_HAZEL_GROUSE",
-            #                       "max","average","sum","TEXT FOR HOVERING AVG Hazel Grouse"],
-            # HSI carpercaillie - maximise
-            #"Sum_Total_CAPERCAILLIE": ["Total habitat index for CAPERCAILLIE (max average over yrs)",
-            #                       "Total_CAPERCAILLIE",
-            #                       "max","average","sum","TEXT FOR HOVERING AVG Capercaillie"]
-            #}
-            
-            #self.recreation = {
-            # Recreation index - maximise
-            #"Sum_Total_Recreation" : ["Virkistysarvo ",
-            #                          "Total_Recreation",
-            #                          "max","min","sum",'Total_rec Hovering'],
-            #}
-            
-            self.biodiversity = {
-
-            "NBP_pool_c" : ["NBP pool",
-                        "NBP_pool_c",
-                        "max","lastYear","areaWeightedAverage", "TEXT FOR HOVERING Carbon"],
-   
-            # Deadwood - target 2050, increase by XX%
-            "NPP" : ["Net primary production",
-                                               "NPP",
-                                               "max","lastYear","areaWeightedAverage","TEXT FOR HOVERING AVG DW _2050"],
-            # Average age - target 2100, increase by XX%
-            #"Average_Age": ["Metsäikä (kertaa, suhteessa vuoteen 2024)",
-            #                                  "Relative_Age",
-            #                                  "max","targetYear","sum",2115],
-            # Deciduous tree volume - target 2050, increase by XX% 
-            #"relative_prc_V_deciduous_2050": ["Lehtipuiden osuus vuoteen 2050 mennessä (kertaa suhteessa vuoteen 2024)",
-            #                                  "Relative_Total_prc_V_deciduous",
-            #                                  "max","targetYearWithSlope","sum",2050,"TEXT FOR HOVERING total % V deciduous"],
-
-                }
-            
-            
-            self.objectives = {
-                      **self.wood_production_bioenergy,
-                      **self.biodiversity
-                      #**self.recreation
-            }
-            
-            print_local("objectives for BDS loaded")
+        print_local("objectives for BDS loaded")
             
             
         self.initialValues = {"Total_i_Vm3":107*10**6 / 19,               # from National Forest Policy            

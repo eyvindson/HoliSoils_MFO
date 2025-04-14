@@ -986,10 +986,10 @@ f                                                (self.data.loc[(slice(None),yea
             self.result = result
             self.AREA_REGIMES = (self.data.loc[slice(None),slice(None),slice(None)]['AREA']*tt3['Decision']).to_frame().loc[slice(None),self.data.index.get_level_values(1)[0],slice(None)].groupby("regime").sum()
         if self.LOC == "HS":
-            t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),['NPP', 'TOTAL_SOIL_c', 'NBP_pool_c',]])#
+            t6 = pd.DataFrame(self.data.loc[(slice(None),slice(None),slice(None)),list(self.VARS.keys())])#
             t7 = t6.reset_index()
             t7.set_index(['id','regime','year'], inplace=True)
-            tt3 = t7[['NPP']]
+            tt3 = t7[[list(self.VARS.keys())[0]]]
             tt3 = tt3.rename(columns={"V":"Decision"})
             self.tt3=tt3
             for (s,r) in t3.index:
@@ -1370,7 +1370,10 @@ f                                                (self.data.loc[(slice(None),yea
 
                         # Step 3: Filter active decisions
                         data_2d = df_solution[df_solution['Value'] > 0].copy()
-
+                        
+                        unique_types = sorted(data_2d['level_1'].unique())
+                        
+                        '''
                         # Step 4: Map unique management types to consistent colors using tab10
                         unique_types = sorted(data_2d['level_1'].unique())
                         cmap = cm.get_cmap('tab10')
@@ -1398,7 +1401,81 @@ f                                                (self.data.loc[(slice(None),yea
                         plt.title("Forest management")
                         plt.grid(True)
                         plt.tight_layout()
-                        plt.show()
+                        plt.show()'''
+                        import pandas as pd
+                        import numpy as np
+                        import xarray as xr
+
+                        df = data_2d
+                        df['treatment_code'] = df['level_1'].astype('category').cat.codes + 1
+                        # Assuming df is your DataFrame with columns 'lat', 'lon', and 'level_1'
+
+                        # 1. Get sorted unique lat/lon values
+                        lats = sorted(df['lat'].unique())
+                        lons = sorted(df['lon'].unique())
+
+                        # 2. Create empty 2D array with dtype=object (or str if you're storing text)
+                        data = np.full((len(lats), len(lons)), 0, dtype=object)
+
+                        # 3. Create mappings from lat/lon to grid indices
+                        lat_to_idx = {lat: i for i, lat in enumerate(lats)}
+                        lon_to_idx = {lon: j for j, lon in enumerate(lons)}
+
+                        # 4. Fill array with level_1 values
+                        for _, row in df.iterrows():
+                            i = lat_to_idx[row['lat']]
+                            j = lon_to_idx[row['lon']]
+                            data[i, j] = row['treatment_code']
+
+                        # 5. Create DataArray
+                        da = xr.DataArray(
+                            data,
+                            coords={'lat': lats, 'lon': lons},
+                            dims=('lat', 'lon'),
+                            name='treatment_decision'  # optional name
+                        )
+
+                        # Now `da` is a 2D DataArray with labeled lat/lon axes
+                        import matplotlib.pyplot as plt
+                        import matplotlib.colors as mcolors
+
+
+                        treatment_map = dict(enumerate(df['level_1'].astype('category').cat.categories, start=1))
+                        treatment_map[0] = "SA"
+
+
+
+                        d2_data = da.values
+                        d2_data = da.values.astype(int)
+                        masked_data = np.where(d2_data == 0, np.nan, d2_data)
+                        used_ids = np.unique(d2_data)
+
+                        max_id = used_ids.max()
+                        ncat = max(max_id, 1)
+
+                        cmap = plt.get_cmap("Spectral", ncat)
+                        cmap.set_bad('white')
+                        boundaries = np.arange(0.5, ncat + 1.5, 1)
+                        norm = mcolors.BoundaryNorm(boundaries, ncat)
+                        
+                        color_map = {treatment_map[i]: cmap(norm(i)) for i in range(1, ncat + 1)}
+                        
+
+                        fig, ax = plt.subplots(figsize=(8, 6))
+                        lats = da.coords["lat"].values
+                        lons = da.coords["lon"].values
+
+                        im = ax.pcolormesh(lons, lats, masked_data, cmap=cmap, norm=norm, shading='auto')
+                        ax.set_title("Forestry action selected", fontdict={'fontsize': 14})
+                        ax.set_xlabel("Longitude")
+                        ax.set_ylabel("Latitude")
+
+                        cb = fig.colorbar(im, ax=ax, boundaries=boundaries, ticks=range(1, ncat + 1))
+                        tick_labels = [treatment_map.get(i, f"ID_{i}") for i in range(1, ncat + 1)]
+                        cb.ax.set_yticklabels(tick_labels)
+
+                        plt.tight_layout()
+
 
                         # ===== Stacked Bar Plot =====
                         grouped = data_2d.groupby('level_1')['Value'].sum()
@@ -1408,7 +1485,7 @@ f                                                (self.data.loc[(slice(None),yea
                         start = 0
                         for level in unique_types:
                             percent = percentages.get(level, 0)
-                            ax.barh(0, percent, left=start, color=color_map[level], label=level)
+                            ax.barh(0, percent, left=start, color=color_map.get(level,'gray'), label=level)
                             start += percent
 
                         ax.set_xlim(0, 100)
